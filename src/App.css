@@ -1,0 +1,22 @@
+/* Add App specific styles here */
+
+.app-container {
+  max-width: 100%; /* Expand to full width of its parent in Webflow */
+  margin: 0 auto; /* Center the container if a max-width is set by Webflow later */
+  padding: 0; /* Remove padding, ChatWindow can handle its own internal padding */
+  /* border: 1px solid var(--maia-border-color, #ccc); Removed border */
+  /* border-radius: var(--maia-container-border-radius, 8px); Removed border radius */
+  background-color: transparent; /* Ensure it blends with body's eggshell */
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); Removed shadow */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Use the height of the parent container */
+  min-height: 600px; /* Set a reasonable minimum height */
+  box-sizing: border-box; /* Ensure padding/border don't add to width/height */
+  color: inherit; /* Inherit eerie black from body */
+  border: 1px solid #17191A; /* Eerie Black border */
+  border-radius: 1rem; /* Consistent border-radius */
+  overflow: hidden; /* Ensure child elements respect the border-radius */
+}
+
+/* Removed the .app-title style rule as the h1 element was removed */

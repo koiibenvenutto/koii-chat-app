@@ -1,0 +1,30 @@
+/* Import Webflow overrides and general website styling */
+@import './webflow-overrides.css';
+
+:root {
+  font-family: 'DM Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; Removed for now to focus on a single theme */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0; /* Added padding 0 for reset */
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #FFFFF5; /* Eggshell - from koiib.com */
+  color: #17191A; /* Eerie Black - from koiib.com */
+  display: flex; /* To help center content if needed or ensure full height children work well */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Removed @media (prefers-color-scheme: dark) section */
+
+/* Add global styles or resets below as needed */

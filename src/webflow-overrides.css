@@ -1,0 +1,93 @@
+/* 
+ * Webflow Overrides & General Website Styling
+ * This file contains styles for elements that are difficult to style directly in Webflow
+ * such as Rich Text elements, global overrides, and custom styling needs.
+ */
+
+/* Font quality improvements */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+
+/* Rich Text Image Styling - Comprehensive approach */
+.rich-text img,
+.w-richtext img,
+.w-richtext figure img {
+  border-style: solid;
+  border-radius: 1rem;
+  border-color: #2e3033;
+  border-width: 1px;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+  filter: sepia(30%) brightness(100%) saturate(100%) hue-rotate(5deg);
+}
+
+/* Ensure figure containers don't constrain image width */
+.rich-text figure,
+.w-richtext figure,
+.w-richtext figure.w-richtext-figure-type-image,
+.w-richtext figure[data-rt-type="image"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: block !important;
+}
+
+/* Ensure figure div containers don't constrain width */
+.w-richtext figure > div,
+.w-richtext figure.w-richtext-figure-type-image > div,
+.w-richtext figure[data-rt-type="image"] > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+/* Override any center-aligned figure constraints */
+.w-richtext figure.w-richtext-align-center,
+.w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image > div,
+.w-richtext figure.w-richtext-align-center[data-rt-type="image"] > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Code Styling */
+code {
+  background: #f7f6f3;
+  border-radius: 3px;
+  padding: 3px 6px;
+  margin: 0 2px;
+  font-family: 'DM Mono', SFMono-Regular, Menlo, Consolas, 'PT Mono', monospace;
+  font-size: 0.85em;
+  color: #eb5757;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  letter-spacing: -0.03em;
+  display: inline-block;
+}
+
+/* Fix for blockquote spacing issue */
+blockquote {
+  margin-bottom: 0;
+  padding: 0 1rem;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Clean HR styling - simple eerie black line */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #17191A; /* Eerie Black - matching your color scheme */
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+/* Rich Text Element Styling */

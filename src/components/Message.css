@@ -1,0 +1,149 @@
+.message {
+  padding: 0.75rem 1rem; /* Generous padding */
+  border-radius: 1rem; /* Softer, modern rounded corners */
+  max-width: 75%; /* Good max width */
+  word-wrap: break-word;
+  display: inline-block; /* So max-width works as expected */
+  line-height: 1.5; /* Improved line height for readability */
+  font-family: 'DM Sans', sans-serif; /* Ensure DM Sans */
+}
+
+.message .message-sender {
+  font-family: 'DM Mono', monospace; /* DM Mono for sender */
+  font-size: 0.75em;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  /* Color will be set by user/ai specific rules */
+}
+
+.message.user {
+  background-color: #17191A; /* Eerie Black background */
+  color: #FFFFF5; /* Eggshell text */
+  align-self: flex-end;
+}
+.message.user .message-sender {
+  color: #AEB1B4; /* Light grey for sender on dark background */
+}
+
+.message.ai {
+  background-color: #FFFFF5; /* Eggshell background */
+  color: #17191A; /* Eerie Black text */
+  align-self: flex-start;
+  outline: 1px solid #17191A; /* Added Eerie Black outline */
+}
+.message.ai .message-sender {
+  color: #424444; /* Neutral Dark for sender on light background */
+}
+
+.message-text {
+  font-size: 1em;
+  /* Additional styling for message text if needed */
+}
+
+/* Markdown styling for AI messages */
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4,
+.message-text h5,
+.message-text h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.message-text h1 {
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3em;
+}
+
+.message-text h2 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+}
+
+.message-text h3 {
+  font-size: 1.2em;
+}
+
+.message-text p {
+  margin-bottom: 1em;
+}
+
+.message-text ul,
+.message-text ol {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.message-text li {
+  margin-bottom: 0.3em;
+}
+
+.message-text blockquote {
+  padding: 0.5em 1em;
+  border-left: 3px solid #ccc;
+  margin: 0.5em 0;
+  background-color: rgba(0,0,0,0.03);
+}
+
+.message-text pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+
+.message-text code {
+  font-family: 'DM Mono', monospace;
+  background-color: rgba(0,0,0,0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.message-text pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.message-text a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.message-text a:hover {
+  text-decoration: underline;
+}
+
+.message-text table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.message-text table th,
+.message-text table td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+}
+
+.message-text table tr {
+  background-color: white;
+}
+
+.message-text table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.message-text hr {
+  height: 1px;
+  background-color: #ddd;
+  border: none;
+  margin: 1.5em 0;
+} 

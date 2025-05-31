@@ -1,0 +1,21 @@
+.message-list {
+  flex-grow: 1; /* Takes up available vertical space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 1rem 1.5rem; /* Increased padding for a more spacious feel */
+  padding-bottom: 1.5rem; /* Add bottom padding for spacing from input */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly increased gap between messages */
+  background-color: transparent; /* Transparent to blend with ChatWindow/App background */
+  /* Remove bottom padding - input positioning will be handled differently */
+  height: 0; /* This forces flex-grow to work properly */
+  min-height: 0; /* Allow shrinking below content size */
+}
+
+.empty-chat-message {
+  text-align: center;
+  color: var(--maia-secondary-text, #777);
+  padding: 20px;
+  font-style: italic;
+  margin-top: 2rem;
+} 
