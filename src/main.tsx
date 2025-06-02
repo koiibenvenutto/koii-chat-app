@@ -3,30 +3,18 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-// Function to find or create a root element for the React app
-function getOrCreateRootElement(): HTMLElement {
-  // First, try to find an existing root element
-  let rootElement = document.getElementById('root');
+// Function to find the specific KOii chat container
+function getKOiiChatContainer(): HTMLElement | null {
+  // ONLY look for the specific KOii chat container - no fallbacks
+  const chatContainer = document.getElementById('KOii-chat-container');
   
-  if (!rootElement) {
-    // If no root element exists, try to find a chat container
-    rootElement = document.getElementById('chat-container');
+  if (!chatContainer) {
+    console.log('KOii-chat-container not found. Chat will not render on this page.');
+    return null;
   }
   
-  if (!rootElement) {
-    // If still no element, try to find any element with class 'maia-chat'
-    rootElement = document.querySelector('.maia-chat') as HTMLElement;
-  }
-  
-  if (!rootElement) {
-    // As a last resort, create a root element and append it to body
-    console.log('No suitable container found, creating root element');
-    rootElement = document.createElement('div');
-    rootElement.id = 'root';
-    document.body.appendChild(rootElement);
-  }
-  
-  return rootElement;
+  console.log('KOii-chat-container found. Initializing chat...');
+  return chatContainer;
 }
 
 // Wait for DOM to be ready
@@ -38,8 +26,15 @@ if (document.readyState === 'loading') {
 
 function initializeApp() {
   try {
-    const rootElement = getOrCreateRootElement();
-    const root = createRoot(rootElement);
+    const chatContainer = getKOiiChatContainer();
+    
+    // Only proceed if we found the specific container
+    if (!chatContainer) {
+      console.log('Chat container not found. Skipping chat initialization.');
+      return;
+    }
+    
+    const root = createRoot(chatContainer);
     
     root.render(
       <StrictMode>
@@ -47,8 +42,8 @@ function initializeApp() {
       </StrictMode>,
     );
     
-    console.log('Maia chat app initialized successfully');
+    console.log('KOii chat app initialized successfully');
   } catch (error) {
-    console.error('Failed to initialize Maia chat app:', error);
+    console.error('Failed to initialize KOii chat app:', error);
   }
 }
