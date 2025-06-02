@@ -1,5 +1,10 @@
 # netlify.toml
 
+[build]
+  base = "KOii-chat-react-app"
+  publish = "dist"
+  command = "npm run build"
+
 # Simple CORS configuration to allow only koiib.com
 [[headers]]
   for = "/*"
