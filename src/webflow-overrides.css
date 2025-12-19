@@ -24,8 +24,6 @@
   height: auto !important;
   display: block;
   filter: sepia(30%) brightness(100%) saturate(100%) hue-rotate(5deg);
-  object-fit: contain;
-  aspect-ratio: attr(width) / attr(height);
 }
 
 /* Ensure figure containers don't constrain image width */
